@@ -1,6 +1,5 @@
- #@@ -1,5 +1,5 @@
- pywin32
- requests>=2.32.0
- fastapi
- uvicorn
- typing_extensions
+pywin32
+requests>=2.32.0
+fastapi
+uvicorn
+typing_extensions
