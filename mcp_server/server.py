@@ -14,3 +14,5 @@ def new_incident(incident: Incident):
     # Forward incident to ticket agent
     response = requests.post(TICKET_AGENT_URL, json=incident)
     return {"status": "forwarded", "ticket_agent": response.status_code}
+
+

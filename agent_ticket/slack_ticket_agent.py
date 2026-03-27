@@ -1,10 +1,17 @@
 from fastapi import FastAPI
 import requests
 from shared.incident_schema import Incident
+import os
+from dotenv import load_dotenv
 
 app = FastAPI()
+load_dotenv()
 
-SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/XXX/YYY/ZZZ"
+SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL") #SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/XXX/YYY/ZZZ"
+
+if not SLACK_WEBHOOK_URL:
+    raise ValueError("SLACK_WEBHOOK_URL not set in environment variables")
+
 
 @app.post("/create_ticket")
 def create_ticket(incident: Incident):

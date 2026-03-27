@@ -6,6 +6,10 @@ A distributed incident detection and notification system that monitors Windows s
 
 The Incident System automatically detects critical errors from Windows Event Logs and creates Slack notifications. It consists of three microservices that work together to monitor, process, and alert on system incidents.
 
+## Tasks
+ 
+  I built a multi-agent incident management system on Windows using FastAPI, uvicorn, NSSM, and Slack integrations.
+
 **Key Features:**
 - 🔍 Real-time Windows Event Log monitoring
 - 📤 Automatic incident forwarding and routing
